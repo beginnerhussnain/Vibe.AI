@@ -21,31 +21,3 @@ Code Block Formatting (For the developers and aspiring ones): If Vibe.AI decides
 Quick Replies (For when you can't even): Can't think of what to say next? We've got pre-chewed responses ready for you. You're welcome.
 
 Accessibility (Because everyone deserves a digital friend): We made sure it plays nice with common browser features.
-
-🚀 Get Started (It's not rocket science, we promise)
-Clone this masterpiece:
-
-Bash
-
-git clone https://github.com/YourUsername/Vibe.AI.git
-cd Vibe.AI
-(Replace YourUsername with your actual GitHub username, unless you want to credit someone else's imaginary repo.)
-
-Open index.html: Seriously, just open it in your favorite modern web browser. It's that simple. No compilers, no build steps, no tears.
-
-Configure API Access (The "Magic" Ingredient):
-For Vibe.AI to actually, you know, vibe, it needs access to Google's intelligent services.
-
-Obtain an API key: Head over to the Google Cloud Console and enable the Gemini API for your project. Follow their super intuitive instructions to create an API key.
-
-Insert the key: Open the script.js file. You'll find a line that looks suspiciously like this:
-
-JavaScript
-
-const API_KEY = "YOUR_GEMINI_API_KEY_HERE"; // Replace with your actual key
-Replace "YOUR_GEMINI_API_KEY_HERE" with the glorious string of characters you just acquired. Don't worry, we won't tell anyone your secret.
-
-🤝 Contribution (If you dare)
-Found a bug? Have an idea that will make Vibe.AI even more mind-blowingly sarcastic? Feel free to open an issue or submit a pull request. Just try not to break anything important.
-
-Remember to replace YourUsername in the clone command with your actual GitHub username!
