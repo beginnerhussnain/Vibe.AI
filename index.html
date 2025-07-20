@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe.AI Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="background-effect" class="background-effect"></div>
+    
+    <div class="chat-app-container">
+        <header class="chat-header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <!-- Replace this SVG with your logo image -->
+                    <img src="gemini.svg" alt="Vibe.AI Logo" style="height: 40px;">
+                </div>
+                <h1>Vibe<span>AI</span></h1>
+            </div>
+            <div class="header-actions">
+                <button class="icon-button voice-mode-btn" id="voice-mode-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="icon-button dark-mode-btn" id="dark-mode-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="icon-button" id="menu-btn">
+                    <i class="fas fa-ellipsis-vertical"></i>
+                </button>
+            </div>
+        </header>
+        
+        <div class="chat-container glassmorphism">
+            <div class="chat-history" id="chat-history">
+                <!-- Messages will appear here -->
+            </div>
+            
+            <div class="quick-replies" id="quick-replies">
+                <!-- Quick reply chips will appear here -->
+            </div>
+            
+            <div class="input-container glassmorphism">
+                <div class="input-area">
+                    <button class="icon-button voice-input-btn" id="voice-input-btn">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <!-- Upload button with tooltip -->
+                    <button class="icon-button upload-btn" id="upload-btn" title="Upload Feature coming soon">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <input type="text" id="user-input" placeholder="Message Vibe.AI..." autocomplete="off">
+                    <button class="icon-button send-button" id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="disclaimer">
+                    Vibe.AI may display inaccurate info. Verify important details.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Voice Chat Mode -->
+    <div class="voice-chat-mode" id="voice-chat-mode">
+        <div class="voice-header">
+            <button class="back-to-text" id="back-to-text">
+                <i class="fas fa-arrow-left"></i> Text Mode
+            </button>
+            <div class="voice-title-logo">
+                <img src="gemini.svg" alt="Vibe.AI Logo" style="height: 32px; margin-right: 8px;">
+                <h2>Voice Assistant</h2>
+            </div>
+        </div>
+        <div class="voice-controls">
+            <div class="voice-orb-container" id="voice-orb-container">
+                <div class="voice-orb" id="voice-orb">
+                    <canvas class="voice-orb-canvas" id="voice-orb-canvas"></canvas>
+                </div>
+                <div class="voice-status" id="voice-status">Tap to speak</div>
+            </div>
+        </div>
+    </div>
+    <!-- Menu Dropdown -->
+    <div class="menu-dropdown glassmorphism" id="menu-dropdown">
+        <div class="menu-item" id="new-chat-btn">
+            <i class="fas fa-plus"></i> New Chat
+        </div>
+        <div class="menu-item" id="clear-history-btn">
+            <i class="fas fa-trash"></i> Clear History
+        </div>
+        <div class="menu-item" id="settings-btn">
+            <i class="fas fa-cog"></i> Settings
+        </div>
+        <div class="menu-item" id="sound-toggle">
+            <i class="fas fa-volume-up"></i> Sound Effects
+        </div>
+    </div>
+        <div class="chat-sidebar glassmorphism" id="chat-sidebar">
+    <div class="sidebar-header">
+        <h3>Chat History</h3>
+        <button class="icon-button" id="close-sidebar">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+    <div class="search-container">
+        <input type="text" id="chat-search" placeholder="Search chats...">
+    </div>
+    <div class="chat-list" id="chat-list"></div>
+</div>
+<button class="sidebar-toggle icon-button" id="sidebar-toggle">
+    <i class="fas fa-history"></i>
+</button>
+    <!-- Audio Elements for Sound Effects -->
+    <audio id="message-sent-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+    <audio id="message-received-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-interface-beep-221.mp3"></audio>
+    <audio id="voice-start-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-modern-click-tech-2572.mp3"></audio>
+    <audio id="voice-stop-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-quick-jump-arcade-game-239.mp3"></audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
