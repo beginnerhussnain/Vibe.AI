@@ -76,5 +76,3 @@ You're welcome.
 We made sure it plays nice with common browser features.
 
 ---
-
-Paste it into your `README.md` and it’ll render perfectly on GitHub with all the right vibes. Let me know if you want badges, installation instructions, or a "How to Use" section added too.
